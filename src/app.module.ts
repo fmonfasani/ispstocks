@@ -23,6 +23,8 @@ import { LogisticService } from './logistic/logistic.service';
 import { GeolocationModule } from './geolocation/geolocation.module';
 import { GeolocationController } from './geolocation/geolocation.controller';
 import { GeolocationService } from './geolocation/geolocation.service';
+import { RolesModule } from './roles/roles.module';
+import { VendorsModule } from './vendors/vendors.module';
 
 @Module({
   imports: [
@@ -35,12 +37,14 @@ import { GeolocationService } from './geolocation/geolocation.service';
       useFactory: async (configService: ConfigService) =>
         configService.get('typeorm'),
     }),
+    VendorsModule,
     AuthModule,
     MarketplaceModule,
     PricingModule,
     PaymentModule,
     LogisticModule,
     GeolocationModule,
+    RolesModule, // Importa el módulo de roles
   ],
   controllers: [
     AppController,
