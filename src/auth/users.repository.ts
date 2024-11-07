@@ -6,8 +6,8 @@ export class UsersRepository {
   private users = [
     {
       id: 1,
-      username: 'fede',
-      email: 'fede@gmail.com',
+      username: 'FedeM',
+      email: 'fedem@gmail.com',
     },
     {
       id: 2,
